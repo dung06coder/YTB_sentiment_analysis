@@ -1,0 +1,29 @@
+{
+  "video_id": "abc123",
+  "total_comments": 500,
+  "latency_ms": 12400,
+  "results": {
+    "svm": {
+      "positive": 55.2,
+      "negative": 20.4,
+      "neutral": 24.4,
+      "counts": { "positive": 276, "negative": 102, "neutral": 122 },
+      "samples": [
+        { "text": "Video hay quá, xem mãi không chán", "label": "positive", "confidence": 0.93 },
+        { "text": "Nội dung nhảm, phí thời gian", "label": "negative", "confidence": 0.88 },
+        { "text": "Mình xem lần đầu, chưa biết nói gì", "label": "neutral", "confidence": 0.71 }
+      ]
+    },
+    "phobert": {
+      "positive": 61.0,
+      "negative": 18.2,
+      "neutral": 20.8,
+      "counts": { "positive": 305, "negative": 91, "neutral": 104 },
+      "samples": [
+        { "text": "Quá đỉnh luôn, cảm ơn bạn nhiều", "label": "positive", "confidence": 0.97 },
+        { "text": "Làm dở tệ, không đáng xem", "label": "negative", "confidence": 0.94 },
+        { "text": "Có ai xem video này năm 2026 không", "label": "neutral", "confidence": 0.8 }
+      ]
+    }
+  }
+}
