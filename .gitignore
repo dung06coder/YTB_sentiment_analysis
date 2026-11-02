@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*credentials*.json
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# Local/editor files
+.vscode/
+.DS_Store
+*.log
+
+# Raw or private datasets
+data/raw/
+data/private/
+
+# Temporary generated files
+temp/
+.ipynb_checkpoints/
