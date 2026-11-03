@@ -1,0 +1,86 @@
+{
+  "model": "TF-IDF + LinearSVC",
+  "trained_utc": "2026-11-02T07:48:46.434675+00:00",
+  "classes": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "label2id": {
+    "negative": 0,
+    "neutral": 1,
+    "positive": 2
+  },
+  "metrics": {
+    "accuracy": 0.9534246575342465,
+    "macro_precision": 0.9181385789782737,
+    "macro_recall": 0.8474445078746768,
+    "macro_f1": 0.8760907442993497,
+    "weighted_f1": 0.951615506051719,
+    "majority_baseline_accuracy": 0.5315068493150685,
+    "classification_report": {
+      "negative": {
+        "precision": 0.84,
+        "recall": 0.6,
+        "f1-score": 0.7,
+        "support": 35.0
+      },
+      "neutral": {
+        "precision": 0.9551282051282052,
+        "recall": 0.9706840390879479,
+        "f1-score": 0.962843295638126,
+        "support": 307.0
+      },
+      "positive": {
+        "precision": 0.9592875318066157,
+        "recall": 0.9716494845360825,
+        "f1-score": 0.9654289372599232,
+        "support": 388.0
+      },
+      "accuracy": 0.9534246575342465,
+      "macro avg": {
+        "precision": 0.9181385789782737,
+        "recall": 0.8474445078746768,
+        "f1-score": 0.8760907442993497,
+        "support": 730.0
+      },
+      "weighted avg": {
+        "precision": 0.951819070294967,
+        "recall": 0.9534246575342465,
+        "f1-score": 0.951615506051719,
+        "support": 730.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        21,
+        5,
+        9
+      ],
+      [
+        2,
+        298,
+        7
+      ],
+      [
+        2,
+        9,
+        377
+      ]
+    ]
+  },
+  "tfidf_vocabulary_size": 7561,
+  "model_file": "C:\\Users\\Admin\\Desktop\\YTB_sentiment_analysis\\machine_learning\\models\\svm_model.pkl",
+  "train_cv_macro_f1": 0.846391088462922,
+  "train_rows": 2770,
+  "test_rows": 730,
+  "best_cv_params": {},
+  "segment": false,
+  "group_col": "",
+  "verified_filter_enabled": true,
+  "preprocessing_sha256": "b77fd50242c1c1d1614066935d233fed523d58ba3eb30a3a9ee0b0e0b6c3ba3f",
+  "train_csv_sha256": "5753fa2babf33769542e0294e08665a79917fb9cd86dbf64e6e94feb760c7ab7",
+  "test_csv_sha256": "0438661bc95646d472d7569fc1bba2eceabcb38c06a9bf122735d4c93f51b907",
+  "sklearn_version": "1.9.1",
+  "python_version": "3.12.10"
+}

@@ -1,0 +1,12 @@
+{
+  "selected_model": "svm",
+  "selected_by": "train_cv_macro_f1",
+  "train_cv_macro_f1": 0.7251164390235539,
+  "test_label_provenance": "pseudo_label_agreement_not_ground_truth_accuracy",
+  "classes": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "preprocessing_sha256": "56876c21d689f7605df51b4e2ba79775c368d9c571883dbbb2883b265b6ed5a9"
+}
