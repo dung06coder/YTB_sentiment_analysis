@@ -1,0 +1,69 @@
+{
+  "model": "Word TF-IDF / LinearSVC",
+  "trained_at_utc": "2026-11-03T08:15:57.507365+00:00",
+  "selection": {
+    "train_cv_macro_f1": 0.7193380698410858,
+    "train_cv_std": 0.0073367206797045085,
+    "params": {},
+    "seconds": 5.5
+  },
+  "evaluation": {
+    "accuracy": 0.7397563676633444,
+    "macro_precision": 0.739972496481978,
+    "macro_recall": 0.7397563676633444,
+    "macro_f1": 0.7396427299381118,
+    "weighted_f1": 0.7396427299381118,
+    "confusion_matrix": [
+      [
+        1375,
+        275,
+        156
+      ],
+      [
+        344,
+        1240,
+        222
+      ],
+      [
+        176,
+        237,
+        1393
+      ]
+    ],
+    "classification_report": {
+      "negative": {
+        "precision": 0.7255936675461742,
+        "recall": 0.7613510520487264,
+        "f1-score": 0.7430424209673061,
+        "support": 1806.0
+      },
+      "neutral": {
+        "precision": 0.7077625570776256,
+        "recall": 0.6866002214839424,
+        "f1-score": 0.6970207982012366,
+        "support": 1806.0
+      },
+      "positive": {
+        "precision": 0.7865612648221344,
+        "recall": 0.7713178294573644,
+        "f1-score": 0.7788649706457925,
+        "support": 1806.0
+      },
+      "accuracy": 0.7397563676633444,
+      "macro avg": {
+        "precision": 0.739972496481978,
+        "recall": 0.7397563676633444,
+        "f1-score": 0.7396427299381118,
+        "support": 5418.0
+      },
+      "weighted avg": {
+        "precision": 0.739972496481978,
+        "recall": 0.7397563676633444,
+        "f1-score": 0.7396427299381118,
+        "support": 5418.0
+      }
+    }
+  },
+  "warning": "Unverified source labels; scores are pseudo-label agreement, not human-verified accuracy",
+  "scikit_learn_version": "1.8.0"
+}

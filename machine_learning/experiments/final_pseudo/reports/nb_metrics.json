@@ -1,0 +1,69 @@
+{
+  "model": "Word TF-IDF / MultinomialNB",
+  "trained_at_utc": "2026-11-03T08:15:59.391653+00:00",
+  "selection": {
+    "train_cv_macro_f1": 0.6844815138834157,
+    "train_cv_std": 0.005376368770930534,
+    "params": {},
+    "seconds": 4.95
+  },
+  "evaluation": {
+    "accuracy": 0.6886304909560723,
+    "macro_precision": 0.6920482073134401,
+    "macro_recall": 0.6886304909560724,
+    "macro_f1": 0.685959523552691,
+    "weighted_f1": 0.6859595235526909,
+    "confusion_matrix": [
+      [
+        1384,
+        217,
+        205
+      ],
+      [
+        524,
+        1008,
+        274
+      ],
+      [
+        246,
+        221,
+        1339
+      ]
+    ],
+    "classification_report": {
+      "negative": {
+        "precision": 0.6425255338904364,
+        "recall": 0.7663344407530454,
+        "f1-score": 0.6989898989898989,
+        "support": 1806.0
+      },
+      "neutral": {
+        "precision": 0.6970954356846473,
+        "recall": 0.5581395348837209,
+        "f1-score": 0.6199261992619927,
+        "support": 1806.0
+      },
+      "positive": {
+        "precision": 0.7365236523652365,
+        "recall": 0.7414174972314507,
+        "f1-score": 0.7389624724061811,
+        "support": 1806.0
+      },
+      "accuracy": 0.6886304909560723,
+      "macro avg": {
+        "precision": 0.6920482073134401,
+        "recall": 0.6886304909560724,
+        "f1-score": 0.685959523552691,
+        "support": 5418.0
+      },
+      "weighted avg": {
+        "precision": 0.6920482073134401,
+        "recall": 0.6886304909560723,
+        "f1-score": 0.6859595235526909,
+        "support": 5418.0
+      }
+    }
+  },
+  "warning": "Unverified source labels; scores are pseudo-label agreement, not human-verified accuracy",
+  "scikit_learn_version": "1.8.0"
+}
