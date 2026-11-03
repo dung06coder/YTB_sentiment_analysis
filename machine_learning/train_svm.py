@@ -1,14 +1,5 @@
 """Train Vietnamese YouTube sentiment classifiers using the THREE prepared CSV files.
 
-Member 2 / data & baseline ML, 2026.
-
-Your repository should contain:
-    machine_learning/
-      preprocessing.py      # exposes clean_text(text, segment=False)
-      train_svm.py           # this script
-      data/clean.csv         # full filtered corpus; NOT used for model fitting
-      data/train.csv         # supervised training + cross-validation
-      data/test.csv          # untouched holdout for reporting
 
 PowerShell (from the repository root):
     .\\.venv\\Scripts\\python.exe machine_learning\\train_svm.py --model all \\
