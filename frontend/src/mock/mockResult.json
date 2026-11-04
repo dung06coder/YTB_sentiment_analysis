@@ -1,0 +1,31 @@
+{
+  "video_id": "abc123",
+  "total_comments": 500,
+  "latency_ms": 12400,
+  "results": {
+    "svm": {
+      "positive": 62, "neutral": 25, "negative": 13,
+      "counts": { "positive": 310, "neutral": 125, "negative": 65 },
+      "avg_confidence": 87.5,
+      "metrics": { "accuracy": 0.78, "precision": 0.76, "recall": 0.74, "f1": 0.75 },
+      "samples": [
+        { "text": "Tuyệt vời quá anh ơi!", "label": "positive", "confidence": 0.93, "author": "minh_anh", "published_at": "2026-10-20T07:38:00", "like_count": 12 },
+        { "text": "Không biết có hiệu quả thật không...", "label": "neutral", "confidence": 0.71, "author": "hoang_nam", "published_at": "2026-10-20T07:25:00", "like_count": 3 },
+        { "text": "Chờ mãi mà không thấy cập nhật.", "label": "negative", "confidence": 0.88, "author": "thu_ha", "published_at": "2026-10-20T07:35:00", "like_count": 7 },
+        { "text": "Dự án rất thực tế, hóng các phần sau", "label": "positive", "confidence": 0.9, "author": "quang_vu", "published_at": "2026-10-20T07:05:00", "like_count": 5 }
+      ]
+    },
+    "phobert": {
+      "positive": 58, "neutral": 28, "negative": 14,
+      "counts": { "positive": 290, "neutral": 140, "negative": 70 },
+      "avg_confidence": 91.2,
+      "metrics": { "accuracy": 0.84, "precision": 0.83, "recall": 0.81, "f1": 0.82 },
+      "samples": [
+        { "text": "Tuyệt vời quá anh ơi!", "label": "positive", "confidence": 0.97, "author": "minh_anh", "published_at": "2026-10-20T07:38:00", "like_count": 12 },
+        { "text": "Không biết có hiệu quả thật không...", "label": "neutral", "confidence": 0.8, "author": "hoang_nam", "published_at": "2026-10-20T07:25:00", "like_count": 3 },
+        { "text": "Chờ mãi mà không thấy cập nhật.", "label": "negative", "confidence": 0.94, "author": "thu_ha", "published_at": "2026-10-20T07:35:00", "like_count": 7 },
+        { "text": "Dự án rất thực tế, hóng các phần sau", "label": "positive", "confidence": 0.95, "author": "quang_vu", "published_at": "2026-10-20T07:05:00", "like_count": 5 }
+      ]
+    }
+  }
+}
