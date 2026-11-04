@@ -1,0 +1,68 @@
+{
+  "inputs": {
+    "train": {
+      "file": "machine_learning\\data\\train.csv",
+      "sha256": "57a259ea52cd7cfb1dcc696df2dc8e657e6e94457ac2701ff85ff84d0c6b75d2"
+    },
+    "test": {
+      "file": "machine_learning\\data\\test.csv",
+      "sha256": "e78bd31dd426a744102f78767b8fd8f451c6b5c4b89cb8020829166dbc514397"
+    },
+    "clean": {
+      "file": "C:\\Users\\Admin\\Desktop\\YTB_sentiment_analysis\\machine_learning\\data\\clean.csv",
+      "sha256": "15c0e6af4dbecaab6df1d61e22b5260186ac575bfafeecbeec2e232ffbfbb442"
+    }
+  },
+  "preprocessing_sha256": "56876c21d689f7605df51b4e2ba79775c368d9c571883dbbb2883b265b6ed5a9",
+  "split": {
+    "train_rows": 21672,
+    "test_rows": 5418,
+    "train_labels": {
+      "negative": 7224,
+      "neutral": 7224,
+      "positive": 7224
+    },
+    "test_labels": {
+      "negative": 1806,
+      "neutral": 1806,
+      "positive": 1806
+    },
+    "known_video_ids_train": 19,
+    "known_video_ids_test": 4,
+    "unknown_video_rows_train": 20057,
+    "unknown_video_rows_test": 5020,
+    "overlap_clean_text": 0,
+    "overlap_comment_id": 0,
+    "overlap_known_video_id": 0
+  },
+  "labels": {
+    "status_counts": {
+      "train": {
+        "not_human_verified": 21672
+      },
+      "test": {
+        "not_human_verified": 5418
+      }
+    },
+    "evaluation_type": "pseudo_label_agreement_not_ground_truth_accuracy"
+  },
+  "clean": {
+    "rows": 55414,
+    "label_counts": {
+      "negative": 11336,
+      "neutral": 21033,
+      "positive": 23045
+    },
+    "known_video_id_rows": 3500,
+    "missing_video_id_rows": 51914,
+    "distinct_video_ids": 23,
+    "invalid_format_video_ids": 0,
+    "repeated_cleaned_texts": 2124,
+    "duplicate_nonempty_comment_ids": 0,
+    "review_status_counts": {
+      "not_human_verified": 55414
+    }
+  },
+  "split_ids_missing_from_clean": 0,
+  "warning": "Video IDs absent for most data; pseudo labels cannot establish real-world accuracy."
+}

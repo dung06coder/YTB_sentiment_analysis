@@ -1,0 +1,5 @@
+﻿model_key,model,train_cv_macro_f1,train_cv_std,training_seconds,test_accuracy,test_macro_f1,test_weighted_f1
+svm,Word + character TF-IDF / LinearSVC,0.72512,0.00333,13.07,0.74419,0.74399,0.74399
+lr,Word TF-IDF / logistic (SGD),0.72229,0.00628,5.6,0.74308,0.74278,0.74278
+svm_word,Word TF-IDF / LinearSVC,0.71934,0.00734,5.5,0.73976,0.73964,0.73964
+nb,Word TF-IDF / MultinomialNB,0.68448,0.00538,4.95,0.68863,0.68596,0.68596

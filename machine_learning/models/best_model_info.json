@@ -1,0 +1,7 @@
+{
+  "model_key": "svm",
+  "model": "TF-IDF + LinearSVC",
+  "selected_on": "train_cross_validation_macro_f1",
+  "cv_macro_f1": 0.846391088462922,
+  "preprocessing_sha256": "b77fd50242c1c1d1614066935d233fed523d58ba3eb30a3a9ee0b0e0b6c3ba3f"
+}
