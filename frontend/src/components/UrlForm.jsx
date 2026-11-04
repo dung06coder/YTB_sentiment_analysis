@@ -1,14 +1,11 @@
 import { useState } from 'react'
+import { MODELS } from '../models'
 
-const MODELS = [
-  { id: 'svm', label: 'TF-IDF + SVM', desc: 'Nhanh, nhẹ' },
-  { id: 'phobert', label: 'PhoBERT', desc: 'Chính xác hơn, chậm hơn' },
-]
 const SAMPLE = 'https://www.youtube.com/watch?v=abc12345'
 
 export default function UrlForm({ onSubmit, disabled }) {
   const [url, setUrl] = useState('')
-  const [selected, setSelected] = useState(['svm', 'phobert'])
+  const [selected, setSelected] = useState(MODELS.map((m) => m.id))
   const [formError, setFormError] = useState('')
 
   const toggle = (id) =>
@@ -56,7 +53,7 @@ export default function UrlForm({ onSubmit, disabled }) {
       {formError && <p className="error-text">{formError}</p>}
 
       <button className="btn" onClick={handleSubmit} disabled={disabled}>
-        {disabled ? 'Đang phân tích...' : 'Phân tích ngay'}
+        {disabled ? 'Đang phân tích...' : 'Phân tích'}
       </button>
     </div>
   )
