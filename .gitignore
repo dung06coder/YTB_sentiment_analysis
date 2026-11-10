@@ -28,3 +28,13 @@ data/private/
 # Temporary generated files
 temp/
 .ipynb_checkpoints/
+# Bỏ qua dữ liệu
+*.csv
+*.xlsx
+*.json
+
+# Bỏ qua mô hình học máy
+*.pkl
+*.pt
+*.h5
+*.bin
