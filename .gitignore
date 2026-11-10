@@ -39,4 +39,4 @@ temp/
 *.h5
 *.bin
 # Bỏ qua thư mục script cá nhân 
-script/
+scripts/
