@@ -33,10 +33,28 @@ temp/
 *.xlsx
 *.json
 
-# Bỏ qua mô hình học máy
+# Bỏ qua mô hình học máy và deep learning weights (Không đẩy lên Git)
 *.pkl
 *.pt
+*.pth
 *.h5
 *.bin
+*.safetensors
+*.onnx
+checkpoint-*/
+checkpoints/
+phobert_weights/
+phobert_finetuned/
+saved_models/
+runs/
+wandb/
+
+# Cho phép các file báo cáo và cấu hình cần thiết
+!machine_learning/reports/*.json
+!machine_learning/reports/*.csv
+!machine_learning/reports/*.png
+!machine_learning/reports/*.tex
+!machine_learning/reports/*.md
+
 # Bỏ qua thư mục script cá nhân 
 scripts/

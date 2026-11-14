@@ -1,0 +1,6 @@
+﻿model_key,model_name,test_accuracy,test_macro_precision,test_macro_recall,test_macro_f1,test_weighted_f1,f1_negative,f1_neutral,f1_positive
+phobert,PhoBERT (vinai/phobert-base) Fine-tuned,0.86526,0.86582,0.86526,0.86473,0.86473,0.865,0.8356,0.896
+svm,Word + character TF-IDF / LinearSVC,0.74419,0.74435,0.74419,0.74399,0.74399,0.7491,0.6988,0.784
+lr,Word TF-IDF / logistic (SGD),0.74308,0.74313,0.74308,0.74278,0.74278,0.7431,0.7041,0.7811
+svm_word,Word TF-IDF / LinearSVC,0.73976,0.73997,0.73976,0.73964,0.73964,0.743,0.697,0.7789
+nb,Word TF-IDF / MultinomialNB,0.68863,0.69205,0.68863,0.68596,0.68596,0.699,0.6199,0.739

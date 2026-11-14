@@ -1,0 +1,47 @@
+{
+  "model": "PhoBERT (vinai/phobert-base) Fine-tuned",
+  "evaluation": {
+    "accuracy": 0.86526,
+    "macro_precision": 0.86582,
+    "macro_recall": 0.86526,
+    "macro_f1": 0.86473,
+    "weighted_f1": 0.86473,
+    "confusion_matrix": [
+      [
+        1569,
+        151,
+        86
+      ],
+      [
+        178,
+        1504,
+        124
+      ],
+      [
+        75,
+        116,
+        1615
+      ]
+    ],
+    "classification_report": {
+      "negative": {
+        "precision": 0.8612,
+        "recall": 0.8688,
+        "f1-score": 0.865,
+        "support": 1806
+      },
+      "neutral": {
+        "precision": 0.8385,
+        "recall": 0.8328,
+        "f1-score": 0.8356,
+        "support": 1806
+      },
+      "positive": {
+        "precision": 0.8978,
+        "recall": 0.8942,
+        "f1-score": 0.896,
+        "support": 1806
+      }
+    }
+  }
+}
