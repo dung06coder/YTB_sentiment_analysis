@@ -7,13 +7,18 @@ const STEPS = [
   'Tổng hợp kết quả',
 ]
 
-export default function LoadingView() {
-  const [progress, setProgress] = useState(5)
+export default function LoadingView({ onCancel }) {
+  const [progress, setProgress] = useState(4)
+  const [seconds, setSeconds] = useState(0)
 
   useEffect(() => {
-    // Giả lập tiến độ, dừng ở 90% cho tới khi backend trả kết quả
-    const timer = setInterval(() => setProgress((p) => (p < 90 ? p + 2 : p)), 300)
-    return () => clearInterval(timer)
+    // Chạy chậm dần, tiến sát 92% và đứng đợi tới khi backend trả kết quả
+    const p = setInterval(() => setProgress((v) => v + (92 - v) * 0.04), 200)
+    const s = setInterval(() => setSeconds((v) => v + 1), 1000)
+    return () => {
+      clearInterval(p)
+      clearInterval(s)
+    }
   }, [])
 
   const now = Math.min(Math.floor(progress / 25), STEPS.length - 1)
@@ -24,6 +29,7 @@ export default function LoadingView() {
       <div className="progress">
         <div className="progress-bar" style={{ width: `${progress}%` }} />
       </div>
+      <p className="hint">{Math.round(progress)}% · đã chờ {seconds}s</p>
       <ul className="steps">
         {STEPS.map((s, i) => (
           <li key={s} className={i < now ? 'done' : i === now ? 'now' : ''}>
@@ -32,6 +38,7 @@ export default function LoadingView() {
         ))}
       </ul>
       <p className="hint" style={{ marginTop: 14 }}>Việc này có thể mất 10-15 giây, bạn đợi chút nhé.</p>
+      {onCancel && <button className="btn-ghost" onClick={onCancel}>Hủy</button>}
     </div>
   )
 }
