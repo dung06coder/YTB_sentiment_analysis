@@ -4,8 +4,16 @@ const METRICS = [['accuracy', 'Accuracy'], ['precision', 'Precision'], ['recall'
 
 export default function ModelTables({ results }) {
   const ids = Object.keys(results)
-  const best = (k) => Math.max(...ids.map((m) => results[m].metrics?.[k] ?? -1))
   const pct = (v) => (v == null ? '—' : `${(v * 100).toFixed(1)}%`)
+
+  const rows = [
+    ...METRICS.map(([k, name]) => ({ name, get: (m) => results[m].metrics?.[k] })),
+    ...KEYS.map((k) => ({
+      name: `F1 - ${LABELS[k].text}`,
+      get: (m) => results[m].metrics?.f1_per_class?.[k],
+    })),
+  ]
+  const best = (get) => Math.max(...ids.map((m) => get(m) ?? -1))
 
   return (
     <div className="two-col">
@@ -33,19 +41,19 @@ export default function ModelTables({ results }) {
       </div>
 
       <div className="card">
-        <h3>Hiệu năng mô hình (tập test 20%)</h3>
+        <h3>Hiệu năng mô hình (trên tập test)</h3>
         <div className="table-wrap">
           <table>
             <thead>
               <tr><th>Chỉ số (macro)</th>{ids.map((m) => <th key={m}>{modelName(m)}</th>)}</tr>
             </thead>
             <tbody>
-              {METRICS.map(([k, name]) => (
-                <tr key={k}>
-                  <td>{name}</td>
+              {rows.map((r) => (
+                <tr key={r.name}>
+                  <td>{r.name}</td>
                   {ids.map((m) => {
-                    const v = results[m].metrics?.[k]
-                    return <td key={m} className={v != null && v === best(k) ? 'best' : ''}>{pct(v)}</td>
+                    const v = r.get(m)
+                    return <td key={m} className={v != null && v === best(r.get) ? 'best' : ''}>{pct(v)}</td>
                   })}
                 </tr>
               ))}
