@@ -1,9 +1,22 @@
-# Tested for the included saved model with standard Python 3.12 on Windows.
-# Install with: .\.venv\Scripts\python.exe -m pip install -r machine_learning\requirements.txt
-# The best_model.pkl was trained with scikit-learn 1.8.0.
-scikit-learn==1.8.0
+# ==============================================================================
+# Requirements for Machine Learning & Deep Learning (PhoBERT)
+# YouTube Sentiment Analysis Project
+# ==============================================================================
+
+# Core ML & Data Processing (Vitou Baseline)
+scikit-learn>=1.4.0
 numpy>=1.26,<3
 pandas>=2.0,<3
 joblib>=1.3,<2
 matplotlib>=3.7,<4
-# underthesea is OPTIONAL: needed only if you later use clean_text(..., segment=True).
+seaborn>=0.12.0
+
+# Deep Learning & Transformers (Hung - PhoBERT Fine-tuning)
+torch>=2.0.0
+transformers>=4.36.0
+accelerate>=0.26.0
+tqdm>=4.66.0
+
+# Vietnamese NLP Word Segmentation (Required for PhoBERT)
+underthesea>=6.8.0
+pyvi>=0.1.1
