@@ -1,16 +1,16 @@
 # BÁO CÁO THỰC NGHIỆM VÀ SO SÁNH HIỆU NĂNG MÔ HÌNH
 **Đề tài:** Hệ thống phân tích cảm xúc bình luận YouTube tiếng Việt  
 **Người thực hiện:** Hùng (Phụ trách Deep Learning & PhoBERT) & Vitou (Data & Baseline ML)  
-**Ngày báo cáo:** 14/11/2026  
+**Ngày báo cáo:** 15/11/2026  
 
 ---
 
 ## 1. Tóm tắt kết quả cốt lõi (Executive Summary)
 
 - **Mô hình PhoBERT fine-tuned đạt hiệu năng vượt trội toàn diện** so với toàn bộ các mô hình học máy truyền thống (LinearSVC, Multinomial Naive Bayes, Logistic Regression).
-- **Độ chính xác (Accuracy):** PhoBERT đạt **86.53%**, tăng **+12.11%** so với mô hình baseline tốt nhất của nhóm (LinearSVC: 74.42%).
-- **Macro F1-score:** PhoBERT đạt **86.47%**, tăng **+12.07%** so với LinearSVC (74.40%).
-- **Cải thiện bước ngoặt ở lớp Trung lập (Neutral):** Lớp trung lập vốn là bài toán nan giải đối với mô hình Bag-of-Words / TF-IDF do các bình luận trung tính không chứa nhiều từ cảm xúc rõ ràng (F1 của SVM chỉ đạt 69.88%). PhoBERT đã nâng F1 lớp này lên **83.56%** (tăng **+13.68%**).
+- **Độ chính xác (Accuracy):** PhoBERT đạt **79.16%**, tăng **+4.74%** so với mô hình baseline tốt nhất của nhóm (LinearSVC: 74.42%).
+- **Macro F1-score:** PhoBERT đạt **79.01%**, tăng **+4.61%** so với LinearSVC (74.40%).
+- **Cải thiện bước ngoặt ở lớp Trung lập (Neutral):** Lớp trung lập vốn là bài toán nan giải đối với mô hình Bag-of-Words / TF-IDF do các bình luận trung tính không chứa nhiều từ cảm xúc rõ ràng (F1 của SVM chỉ đạt 69.88%). PhoBERT đã nâng F1 lớp này lên **74.27%** (tăng **+4.39%**).
 
 ---
 
@@ -21,7 +21,7 @@
 | **MultinomialNB** | 68.86% | 68.60% | 68.60% | 69.90% | 61.99% | 73.90% |
 | **Logistic Regression (SGD)** | 74.31% | 74.28% | 74.28% | 74.31% | 70.41% | 78.11% |
 | **LinearSVC (Baseline)** | 74.42% | 74.40% | 74.40% | 74.91% | 69.88% | 78.40% |
-| **PhoBERT (Fine-tuned)** | **86.53%** | **86.47%** | **86.47%** | **86.50%** | **83.56%** | **89.60%** |
+| **PhoBERT (Fine-tuned)** | **79.16%** | **79.01%** | **79.01%** | **80.34%** | **74.27%** | **82.43%** |
 
 ---
 
