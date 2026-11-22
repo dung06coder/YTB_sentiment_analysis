@@ -74,3 +74,29 @@ table { width: 100%; border-collapse: collapse; font-size: 14px; }
 th, td { padding: 9px 8px; text-align: left; border-bottom: 1px solid rgba(255,255,255,.08); }
 th { color: #94a3b8; font-weight: 600; }
 td.best { color: #34d399; font-weight: 700; }
+
+/* ===== Tinh chỉnh hiệu ứng ===== */
+.col > .card:nth-child(2) { animation-delay: .12s; }
+.col:nth-child(2) > .card { animation-delay: .06s; }
+.col:nth-child(3) > .card { animation-delay: .12s; }
+.two-col .card:nth-child(2) { animation-delay: .1s; }
+
+.col .card, .two-col .card { transition: transform .2s, border-color .2s; }
+.col .card:hover, .two-col .card:hover { transform: translateY(-2px); border-color: rgba(129,140,248,.4); }
+
+.btn { transition: transform .15s, box-shadow .15s, opacity .15s; }
+.btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(99,102,241,.45); }
+.btn:active:not(:disabled) { transform: scale(.98); }
+.ghost:hover:not(:disabled), .tab:hover { border-color: #818cf8; }
+.tab { transition: background .2s, border-color .2s; }
+
+.btn-ghost { margin-top: 16px; padding: 8px 22px; border-radius: 10px; cursor: pointer; font-size: 14px;
+  color: #cbd5e1; background: transparent; border: 1px solid rgba(255,255,255,.2); }
+.btn-ghost:hover { border-color: #fda4af; color: #fecdd3; }
+
+.c-text { word-break: break-word; overflow-wrap: anywhere; }
+button:focus-visible, input:focus-visible { outline: 2px solid #a5b4fc; outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
