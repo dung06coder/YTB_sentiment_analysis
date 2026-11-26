@@ -1,60 +1,35 @@
-# Python
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-.pytest_cache/
-
-# Environment variables and secrets
+# === Bí mật & Biến môi trường ===
 .env
 .env.*
 !.env.example
-*credentials*.json
+*.pem
+*.key
 
-# Frontend
-node_modules/
-dist/
-build/
-
-# Local/editor files
-.vscode/
-.DS_Store
-*.log
-
-# Raw or private datasets
-data/raw/
-data/private/
-
-# Temporary generated files
-temp/
+# === Môi trường Python & Cache ===
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
 .ipynb_checkpoints/
-# Bỏ qua dữ liệu
-*.csv
-*.xlsx
-*.json
 
-# Bỏ qua mô hình học máy và deep learning weights (Không đẩy lên Git)
-*.pkl
+# === Frontend Node.js ===
+frontend/node_modules/
+frontend/dist/
+
+# === Dữ liệu thô & Trọng số mô hình lớn (>100MB) ===
+raw_comments.csv
+*.bin
 *.pt
 *.pth
-*.h5
-*.bin
 *.safetensors
-*.onnx
-checkpoint-*/
-checkpoints/
-phobert_weights/
-phobert_finetuned/
-saved_models/
-runs/
-wandb/
+machine_learning/models/phobert_finetuned/
+machine_learning/data/*.csv
 
-# Cho phép các file báo cáo và cấu hình cần thiết
-!machine_learning/reports/*.json
-!machine_learning/reports/*.csv
-!machine_learning/reports/*.png
-!machine_learning/reports/*.tex
-!machine_learning/reports/*.md
-
-# Bỏ qua thư mục script cá nhân 
+# === Hệ điều hành & IDE ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
 scripts/
